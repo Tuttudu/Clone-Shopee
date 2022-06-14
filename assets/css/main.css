@@ -33,6 +33,94 @@
     font-weight: 300;
 }
 
+.header__navbar-user {
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: 2px;
+    border-style: solid;
+    cursor: pointer;
+    border-width: 16px 20px;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__navbar-user-menu::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -8px;
+    right: 0;
+    height: 8px;
+    width: 46%;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    z-index: 1;
+    background-color: var(--white-color);
+    min-width: 160px;
+    box-shadow: 0 1px 2px #e0e0e0;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in .2s;
+}
+
+.header__navbar-user-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__navbar-user-item:hover {
+    background-color: #f8f8f8;
+}
+
+.header__navbar-user-item {
+    padding: 8px 16px;
+}
+
+.header__navbar-user-item-separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.header__navbar-user-item:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header__navbar-user-name {
+    margin-left: 4px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
 .header__navbar-item--strong {
     font-weight: 400;
 }
@@ -48,9 +136,13 @@
     top: 5px;
 }
 
-.headr__navbar-icon-link {
+.header__navbar-icon-link {
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
 }
 
 .header__navbar-icon {
@@ -389,6 +481,11 @@
     width: 200px;
 }
 
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__logo-img {
     width: 150px;
 }
@@ -486,6 +583,106 @@
     cursor: pointer;
 }
 
+.header__cart-heading {
+    margin: 8px 8px 0 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+
+
+.header__cart-list-item {
+    list-style: none;
+    padding: 0;
+}
+
+.header__cart-item {
+    display: flex;
+    align-items: center;
+}
+
+.header__cart-item:hover {
+    background-color: #f8f8f8;
+}
+
+.header__cart-img {
+    width: 42px;
+    margin: 12px;
+    border: 1px solid #E8E8E8;
+}
+
+.header__cart-item-info {
+    width: 100%;
+    margin-right: 12px;
+    
+
+}
+
+.header__cart-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.header__cart-item-name {
+    flex-grow: 7;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 2.2rem;
+}
+
+.header__cart-item-price {
+    flex-grow: 1;
+    text-align: end;
+    color: var(--primary-color);
+}
+
+.header__cart-item-multiplication {
+    flex-grow: 1;
+    text-align: end;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+.header__cart-item-qnt {
+    flex-grow: 1;
+    text-align: end;
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.header__cart-item-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__cart-item-description {
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.header__cart-item-remove {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.header__cart-item-remove:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.header__cart-item-btn {
+    float: right;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+
+.header__cart-item-btn:hover {
+    opacity: 0.9;
+}
+
 .header__search-wrap {
     flex-grow: 85;
     height: 100%;
@@ -549,7 +746,7 @@
     list-style: none;
     position: absolute;
     right: 0;
-    top: 28px;
+    top: 29px;
     width: 140px;
     padding: 0;
     background-color: var(--white-color);
