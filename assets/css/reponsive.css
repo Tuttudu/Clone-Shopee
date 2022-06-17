@@ -3,11 +3,7 @@
     .hide-on-mobile-tablet {
         display: none;
     }
-    :root {
-        --header-height: 68px;
-        --navbar-height: 0px;
-    }
-
+    
     .header {
         position: fixed;
         z-index: 10;
@@ -50,6 +46,10 @@
     .hide-on-tablet {
         display: none;
     }
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
     .header__cart {
         width: 74px;
         justify-content: flex-end;
@@ -64,6 +64,11 @@
     .hide-on-mobile {
         display: none;
     }
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
     .header-with-search {
         justify-content: space-between;
         padding: 0 16px;
@@ -132,5 +137,8 @@
     }
     .header__search-wrap {
         flex-grow: 40;
+    }
+    .mlm-8 {
+        margin-left: 8px;
     }
 }
