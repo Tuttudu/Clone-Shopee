@@ -1,0 +1,133 @@
+/* Mobile & tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        animation: fadeIn ease-in .1s;
+        padding: 0 calc((100% - 644px)/2);
+    }
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .app__container {
+        margin-top: calc(var(--header-sort-bar-height) + var(--header-height));
+    }
+
+    .app__content {
+        padding-top: 8px;
+    }
+
+    .mobile-category {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 74px;
+        justify-content: flex-end;
+    }
+    .header__search-option {
+        z-index: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-with-search {
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+    .header__logo,
+    .header__cart {
+        width: unset;
+    }
+    .header__mobile-search {
+        display: block;
+    }
+
+    .header__search {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        z-index: 1;
+        height: 46px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+        padding: 0 16px;
+        animation: searchFadeIn ease-in .3s;
+        display: none;
+    }
+    .header__search-history {
+        position: fixed;
+        top: calc(var(--header-height) + var(--header__sort-bar-height));
+        left: 0;
+        width: 100%;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    }
+
+    @keyframes searchFadeIn {
+        from {
+            height: 0;
+            opacity: 0;
+        } to {
+            height: 46px;
+            opacity: 1;
+        }
+    }
+    .pagination-item__link {
+        --height: 38px;
+        min-width: 36px;
+        font-size: 1.8rem;
+    }
+    .pagination-item {
+        margin: 0;
+    }
+
+    
+    .header__search-btn {
+        flex-grow: 15;
+    }
+
+    .app__content {
+        margin: 0 6px;
+    }
+    .header__logo-img {
+        width: 110px;
+    }
+    .footer__content {
+        padding: 0 16px;
+        justify-content: center;
+        text-align: center;
+    }
+}
